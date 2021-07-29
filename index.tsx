@@ -66,7 +66,7 @@ const Sidebar: React.FC<SidebarProps> = ({
         position={["sticky", null, null, "absolute"]}
         top="50%"
       >
-        <StaticImage alt="show-more-icon" src="../images/more_vertical.svg" />
+        <StaticImage alt="show-more-icon" src="./more_vertical.svg" />
       </Box>
       <Box>
         <List
