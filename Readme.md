@@ -5,6 +5,7 @@ Make sure the css file is imported properly.
 ```js
 import sidebarStyle from "../whereever/thefile.css
 ```
+<small> The css file is already imported by default. If you change the relative location of the css file, make sure to change the import as well.</small>
 
 Then simply import and integrate into any React component. 
 
