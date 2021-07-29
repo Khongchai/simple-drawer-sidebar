@@ -1,0 +1,34 @@
+
+@media only screen and (min-width: 768px) {
+  .sidebar-opened {
+    width: 400px;
+    max-width: 80vw;
+    opacity: 1;
+  }
+  .sidebar-closed {
+    width: 40px;
+    opacity: 0.4;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .sidebar-opened {
+    width: 400px;
+    max-width: 100vw;
+    opacity: 1;
+  }
+  .sidebar-closed {
+    width: 14px;
+    opacity: 0.4;
+  }
+}
+
+.sidebar-inview {
+  border-right-color: #b891ff !important;
+}
+
+.hover-gradient:hover {
+  background: linear-gradient(to right, #b891ff, #e45f6b, #f99f35) !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
