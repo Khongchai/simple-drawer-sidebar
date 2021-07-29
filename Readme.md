@@ -28,6 +28,8 @@ The component is a fixed-position component, so place it anywhere as long as it 
 There are 4 props you can pass, but only 3 at once.
 You can choose to either have the Sidebar populate its items by looking up the class or the tag.
 
+Here's the type:
+
 ```jsx
 type SidebarProps = {
   backgroundColor?: string;
