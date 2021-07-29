@@ -2,6 +2,7 @@ import { Box, Link, List, ListItem, Stack } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import monitorScroll from "../utils/MonitorSidebarScroll";
+import css from "./style.css;
 
 type SidebarProps = {
   backgroundColor?: string;
