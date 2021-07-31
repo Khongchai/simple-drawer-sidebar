@@ -1,7 +1,6 @@
-import { Box, Link, List, ListItem, Stack } from "@chakra-ui/react";
+import { Box, Link, List, ListItem, Stack, Image } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
-import { StaticImage } from "gatsby-plugin-image";
-import css from "./style.css;"
+import "./style.css";
 
 type SidebarProps = {
   backgroundColor?: string;
@@ -27,12 +26,12 @@ const Sidebar: React.FC<SidebarProps> = ({
   mainElemsTag,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [mainTopics, setMainTopics] = useState([]);
+  const [mainTopics, setMainTopics] = useState<any[]>([]);
 
   useEffect(() => {
     const mainElems = mainElemsClass
       ? document.getElementsByClassName(mainElemsClass)
-      : document.getElementsByTagName(mainElemsTag);
+      : document.getElementsByTagName(mainElemsTag ? mainElemsTag : "");
     if (mainElems.length > 0) {
       let tmp = [];
       for (let i = 0, length = mainElems.length; i < length; i++) {
@@ -65,7 +64,7 @@ const Sidebar: React.FC<SidebarProps> = ({
         position={["sticky", null, null, "absolute"]}
         top="50%"
       >
-        <StaticImage alt="show-more-icon" src="./more_vertical.svg" />
+        <Image alt="show-more-icon" src="./more_vertical.svg" />
       </Box>
       <Box>
         <List
@@ -116,11 +115,11 @@ function monitorScroll(mainElems: HTMLCollectionOf<Element>) {
       if (entry.isIntersecting) {
         const id = entry.target.innerHTML + "-sidebar-item";
         const sidenavItem = document.getElementById(id);
-        sidenavItem.classList.add("sidebar-inview");
+        sidenavItem?.classList.add("sidebar-inview");
       } else {
         const id = entry.target.innerHTML + "-sidebar-item";
         const sidenavItem = document.getElementById(id);
-        sidenavItem.classList.remove("sidebar-inview");
+        sidenavItem?.classList.remove("sidebar-inview");
       }
     });
   }, observerOptions);
@@ -131,6 +130,5 @@ function monitorScroll(mainElems: HTMLCollectionOf<Element>) {
     }
   }
 }
-
 
 export default Sidebar;
