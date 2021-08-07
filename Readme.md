@@ -30,7 +30,7 @@ You can choose to either have the Sidebar populate its items by looking up the c
 
 Here's the type:
 
-```jsx
+```tsx
 type SidebarProps = {
   backgroundColor?: string;
   /**
