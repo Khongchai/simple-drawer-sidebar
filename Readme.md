@@ -48,3 +48,5 @@ type SidebarProps = {
     }
 );
 ```
+
+Example: https://www.khong.xyz/blog (the bar on the right)
